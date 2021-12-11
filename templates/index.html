@@ -1,0 +1,15 @@
+<HTML>
+   <BODY class="sentimentAnalysis">
+       <center>
+       <h1>Data Engineering II : Sentiment Analysis</h1>
+       <form method="POST" action="{{ url_for('analysis')}}">
+           <input type = "text" name = "phrase" id = "phrase" placeholder="Write Something" required="required" /> <br>
+           <input type="hidden" name="form_type" value="get_sentiment"/><br>
+            <input type = "submit" value="Analyze">
+       </form>
+
+       <h2>{{ prediction_text }}</h2>
+
+       </center>
+   </BODY>
+</HTML>
