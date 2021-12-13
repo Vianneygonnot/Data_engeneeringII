@@ -50,7 +50,7 @@ The App is running on : "localhost:5000"
 How our web interface looks like : 
 
 <p align="center">
-  <img src="analysing.PNG" />
+  <img src="images/analysing.PNG" />
 </p>
 
 # 3.3 The Application Package
@@ -76,7 +76,7 @@ Each team should provide unit and integration tests to their final application. 
 We run 4 tests with pytest : 
 
 <p align="center">
-  <img src="image/pytest.PNG" />
+  <img src="images/pytest.PNG" />
 </p>
 
 In order to make the unit tests, we need to start our application. After that, just run this command line :
