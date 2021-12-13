@@ -33,6 +33,26 @@ The students are free to choose whichever machine-learning model they want, and 
 
 The students are free to choose whichever technology they know/like to create the web insterface. The end result should be a running application which the end user can access through a web browser, and start using immediately.
 
+In order to run the application we need to build the app with this command line :
+
+```
+docker-compose build
+```
+
+and then :
+
+```
+docker-compose up
+```
+
+The App is running on : "localhost:5000"
+
+How our web interface looks like : 
+
+<p align="center">
+  <img src="analysing.PNG" />
+</p>
+
 # 3.3 The Application Package
 
 The final format of the application ready for distribution should be a Docker Image, which administrators can simply run Containers from. Students should provide a description file with their submitted application in which whey describe how to run their image (like providing on which port does the application run by default…)
@@ -52,6 +72,19 @@ Each team is required to create a github repository containing their project, an
 # 4.3 Testing
 
 Each team should provide unit and integration tests to their final application. Unit tests are in the form of testing the functionality of each function of your program (when applicable), and the integration testing will be testing the entire system integrated.
+
+We run 4 tests with pytest : 
+
+<p align="center">
+  <img src="image/pytest.PNG" />
+</p>
+
+In order to make the unit tests, we need to start our application. After that, just run this command line :
+
+```
+python -m pytest unit_test_app.py
+```
+
 
 # 4.4 Containarization
 
