@@ -20,6 +20,7 @@ For any further detail, please contact the instructor: Khodor Hammoud.
 · The application must be easily deployable
 
 # 2. Application Overview
+<img src="https://cdn.discordapp.com/attachments/761273567693897739/920052233075310592/unknown.png"/>
 
 # 3. Technical Description
 
