@@ -56,3 +56,10 @@ Each team should provide unit and integration tests to their final application. 
 # 4.4 Containarization
 
 The final application deliverable should be a Docker image, that contains the pre-trained model as well as the application web interface. Running a container off the delivered image should allow users to view a web interface on their browser and be able to immediately start running predictions.
+
+# 5. Trello for project 
+
+https://trello.com/b/zgZqVp0I/project-data-engeneering
+
+
+
