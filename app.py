@@ -16,10 +16,8 @@ def index():
 
 @app.route('/analysis', methods = ['POST'])
 def analysis():
-    text = request.form.get('phrase', "shitty")
+    text = request.form.get('phrase', "null")
     pred = model.predict_proba(vectorizer.transform([text]))
-
-    '''return render_template("index.html",prediction_text = 'The sentence "{}" is neg {} pos {}'.format(text,pred[0][0],pred[0][1]))'''
     
     if pred[0][1] < 0.4:
         return render_template('negative.html')
