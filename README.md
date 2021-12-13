@@ -90,11 +90,18 @@ python -m pytest unit_test_app.py
 
 The final application deliverable should be a Docker image, that contains the pre-trained model as well as the application web interface. Running a container off the delivered image should allow users to view a web interface on their browser and be able to immediately start running predictions.
 
+Fro create an docker image :
 
-How pull the image :
-```
-docker pull vianneygonnot/data_engeneeringii_web:lastest
-```
+Take the image you want to create
+
+``` docker images```
+
+Put the tag on the dockerfile
+```docker tag data_engeneeringii_web vianneygonnot/data_engeneeringii_web:latest```
+
+Push the docker image on repositerie docker hub 
+
+```docker push vianneygonnot/data_engeneeringii_web:latest ```
 
 # 5. Trello for project 
 
