@@ -94,14 +94,25 @@ Fro create an docker image :
 
 Take the image you want to create
 
-``` docker images```
+``` 
+docker images
+```
 
-Put the tag on the dockerfile
-```docker tag data_engeneeringii_web vianneygonnot/data_engeneeringii_web:latest```
+Put the tag on the dockerfile :
+```
+docker tag data_engeneeringii_web vianneygonnot/data_engeneeringii_web:latest
+```
 
-Push the docker image on repositerie docker hub 
+Push the docker image on repositerie docker hub :
 
-```docker push vianneygonnot/data_engeneeringii_web:latest ```
+```
+docker push vianneygonnot/data_engeneeringii_web:latest 
+```
+
+Pull the docker image :
+```
+docker pull vianneygonnot/data_engeneeringii_web:latest 
+```
 
 # 5. Trello for project 
 
