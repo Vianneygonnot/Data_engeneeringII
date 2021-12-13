@@ -90,6 +90,12 @@ python -m pytest unit_test_app.py
 
 The final application deliverable should be a Docker image, that contains the pre-trained model as well as the application web interface. Running a container off the delivered image should allow users to view a web interface on their browser and be able to immediately start running predictions.
 
+
+How pull the image :
+```
+docker pull vianneygonnot/data_engeneeringii_web:lastest
+```
+
 # 5. Trello for project 
 
 https://trello.com/b/zgZqVp0I/project-data-engeneering
