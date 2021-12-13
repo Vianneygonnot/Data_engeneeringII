@@ -1,29 +1,31 @@
 from flask import Flask, request, render_template
 import time
 import statistics
+import pickle
+import sklearn.linear_model
+import sklearn.feature_extraction.text
 
 app = Flask(__name__)
 
-'''
+model = pickle.load(open("model.pkl", "rb"))
+vectorizer = pickle.load(open("vectorizer.pkl", "rb"))
+
 @app.route('/')
-def my_form():
-    return render_template('my-form.html')
+def index():
+    return render_template('index.html')
 
-@app.route('/', methods=['POST', 'GET'])
-def my_form_post():
-    text = request.form['text']
-    processed_text = text.upper()
-    return processed_text
-
-if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=5000)
-'''
-
-@app.route('/', methods=['GET', 'POST'])
-def my_form():
-    if request.method == 'POST':
-        text = request.form
-    return render_template('my-form.html')
+@app.route('/analysis', methods = ['POST'])
+def analysis():
+    text = request.form.get('phrase', "null")
+    pred = model.predict_proba(vectorizer.transform([text]))
+    
+    if pred[0][1] < 0.4:
+        return render_template('negative.html')
+    elif pred[0][1] > 0.4 and pred[0][1] < 0.6:
+        return render_template('neutral.html')
+    else :
+        return render_template('positive.html')
+    
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)
